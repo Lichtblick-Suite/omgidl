@@ -3,7 +3,7 @@ import {
   IDLMessageDefinition,
   IDLMessageDefinitionField,
   IDLUnionDefinition,
-} from "@foxglove/omgidl-parser";
+} from "@lichtblick/omgidl-parser";
 
 import {
   ComplexDeserializationInfo,

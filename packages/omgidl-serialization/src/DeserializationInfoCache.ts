@@ -4,7 +4,7 @@ import {
   IDLMessageDefinitionField,
   IDLStructDefinition,
   IDLUnionDefinition,
-} from "@foxglove/omgidl-parser";
+} from "@lichtblick/omgidl-parser";
 
 import { UNION_DISCRIMINATOR_PROPERTY_KEY } from "./constants";
 import {

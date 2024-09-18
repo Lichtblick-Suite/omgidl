@@ -1,6 +1,6 @@
 import { CdrWriter, CdrWriterOpts } from "@foxglove/cdr";
-import { DefaultValue, MessageDefinitionField } from "@foxglove/message-definition";
-import { IDLMessageDefinition, IDLMessageDefinitionField } from "@foxglove/omgidl-parser";
+import { DefaultValue, MessageDefinitionField } from "@lichtblick/message-definition";
+import { IDLMessageDefinition, IDLMessageDefinitionField } from "@lichtblick/omgidl-parser";
 
 type PrimitiveWriter = (value: unknown, defaultValue: DefaultValue, writer: CdrWriter) => void;
 type PrimitiveArrayWriter = (value: unknown, defaultValue: DefaultValue, writer: CdrWriter) => void;

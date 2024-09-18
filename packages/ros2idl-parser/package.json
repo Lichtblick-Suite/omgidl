@@ -1,11 +1,11 @@
 {
-  "name": "@foxglove/ros2idl-parser",
+  "name": "@lichtblick/ros2idl-parser",
   "version": "0.3.4",
   "description": "Parser for ROS 2 IDL message definitions",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/foxglove/omgidl.git"
+    "url": "https://github.com/lichtblick-suite/omgidl.git"
   },
   "keywords": [
     "ros",
@@ -21,10 +21,10 @@
     "grammar"
   ],
   "author": {
-    "name": "Foxglove Technologies Inc",
-    "email": "contact@foxglove.dev"
+    "name": "Lichtblick",
+    "email": "lichtblick@bmwgroup.com"
   },
-  "homepage": "https://github.com/foxglove/omgidl/packages/ros2idl-parser",
+  "homepage": "https://github.com/lichtblick-suite/omgidl.git",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "files": [
@@ -46,8 +46,8 @@
     "node": ">= 14"
   },
   "dependencies": {
-    "@foxglove/message-definition": "^0.3.1",
-    "@foxglove/omgidl-parser": "workspace:*",
+    "@lichtblick/message-definition": "^1.0.0",
+    "@lichtblick/omgidl-parser": "workspace:*",
     "md5-typescript": "^1.0.5"
   },
   "devDependencies": {

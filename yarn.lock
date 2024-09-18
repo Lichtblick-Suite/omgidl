@@ -511,7 +511,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eslint-community/eslint-utils@npm:^4.2.0":
+"@eslint-community/eslint-utils@npm:^4.2.0, @eslint-community/eslint-utils@npm:^4.4.0":
   version: 4.4.0
   resolution: "@eslint-community/eslint-utils@npm:4.4.0"
   dependencies:
@@ -566,108 +566,6 @@ __metadata:
   checksum: f1c5479474bbd94a9992f788b52092d9938095014df4983eb6099741dc390c2168ff77c5e8431a8fa3bbf437b34cb74f2c73a0a97331166c837788711f5d501d
   languageName: node
   linkType: hard
-
-"@foxglove/eslint-plugin@npm:^0.22.1":
-  version: 0.22.1
-  resolution: "@foxglove/eslint-plugin@npm:0.22.1"
-  dependencies:
-    "@typescript-eslint/utils": ^5
-    tsutils: ^3
-    typescript: ^4 || ^5
-  peerDependencies:
-    eslint: ^7 || ^8
-    eslint-config-prettier: ^8
-    eslint-plugin-es: ^4
-    eslint-plugin-filenames: ^1
-    eslint-plugin-import: ^2
-    eslint-plugin-prettier: ^3 || ^4
-    prettier: ^2
-  checksum: e36b25da6be6426b2f4d6ff31099535d140f4b54461d1594a41f576dcfb99341a9c2d62ea29275d34ac38da16c9811ffd16ad03931225491a95f46552e2f3e82
-  languageName: node
-  linkType: hard
-
-"@foxglove/message-definition@npm:^0.3.1":
-  version: 0.3.1
-  resolution: "@foxglove/message-definition@npm:0.3.1"
-  checksum: 71699bc9dafc90d07ce312bcaebbedc1f60a173c8ba66421d741cf713ea6bbf6b462b551fcfe6da86488814629639e1dc424e9664c7ea2474227a20ad88ac776
-  languageName: node
-  linkType: hard
-
-"@foxglove/omg-support@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "@foxglove/omg-support@workspace:."
-  dependencies:
-    "@foxglove/eslint-plugin": ^0.22.1
-    "@types/jest": ^29.5.2
-    "@typescript-eslint/eslint-plugin": ^5.60.0
-    "@typescript-eslint/parser": ^7.2.0
-    eslint: 8.52.0
-    eslint-config-prettier: ^8.8.0
-    eslint-plugin-es: ^4.1.0
-    eslint-plugin-filenames: ^1.3.2
-    eslint-plugin-import: ^2.29.1
-    eslint-plugin-jest: ^27.9.0
-    eslint-plugin-prettier: ^4.2.1
-    jest: 29.6.4
-    prettier: 2.7.1
-    ts-jest: 29.1.4
-    typescript: 5.2.2
-  languageName: unknown
-  linkType: soft
-
-"@foxglove/omgidl-parser@workspace:*, @foxglove/omgidl-parser@workspace:packages/omgidl-parser":
-  version: 0.0.0-use.local
-  resolution: "@foxglove/omgidl-parser@workspace:packages/omgidl-parser"
-  dependencies:
-    "@foxglove/message-definition": ^0.3.1
-    "@foxglove/tsconfig": 2.0.0
-    "@types/jest": 29.4.0
-    "@types/nearley": ^2.11.5
-    jest: 29.4.2
-    moo: ^0.5.2
-    nearley: ^2.20.1
-    nearley-loader: ^2.0.0
-    prettier: 2.8.8
-    rimraf: 5.0.5
-    ts-jest: 29.1.4
-    ts-loader: ^9.5.0
-    tslib: ^2
-    typescript: 5.2.2
-    webpack: ^5.89.0
-    webpack-cli: ^5.1.4
-  languageName: unknown
-  linkType: soft
-
-"@foxglove/omgidl-serialization@workspace:packages/omgidl-serialization":
-  version: 0.0.0-use.local
-  resolution: "@foxglove/omgidl-serialization@workspace:packages/omgidl-serialization"
-  dependencies:
-    "@foxglove/cdr": 3.3.0
-    "@foxglove/message-definition": ^0.3.1
-    "@foxglove/omgidl-parser": "workspace:*"
-    "@sounisi5011/jest-binary-data-matchers": 1.2.1
-    typescript: 5.2.2
-  languageName: unknown
-  linkType: soft
-
-"@foxglove/ros2idl-parser@workspace:packages/ros2idl-parser":
-  version: 0.0.0-use.local
-  resolution: "@foxglove/ros2idl-parser@workspace:packages/ros2idl-parser"
-  dependencies:
-    "@foxglove/message-definition": ^0.3.1
-    "@foxglove/omgidl-parser": "workspace:*"
-    "@types/jest": ^28.0.0
-    jest: 28.1.3
-    md5-typescript: ^1.0.5
-    prettier: 2.7.1
-    rimraf: 5.0.5
-    ts-jest: ^29.1.4
-    ts-loader: 9.5.0
-    typescript: 5.2.2
-    webpack: 5.89.0
-    webpack-cli: 5.1.4
-  languageName: unknown
-  linkType: soft
 
 "@foxglove/tsconfig@npm:2.0.0":
   version: 2.0.0
@@ -1502,6 +1400,109 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@lichtblick/eslint-plugin@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "@lichtblick/eslint-plugin@npm:1.0.1"
+  dependencies:
+    "@typescript-eslint/utils": ^6
+    tsutils: ^3
+    typescript: ^4 || ^5
+  peerDependencies:
+    eslint: ^7 || ^8
+    eslint-config-prettier: ^8 || ^9
+    eslint-plugin-es: ^4
+    eslint-plugin-filenames: ^1
+    eslint-plugin-import: ^2
+    eslint-plugin-prettier: ^5
+    prettier: ^3
+  checksum: 340226c47435888692a4e0f0f8d6a525dffc29ad0b9619d8c38836f8ab19603c032ba5f2205b1d3d21b6718b069a1ab93fa6100a438bde3c7757fee0d0cdbf1e
+  languageName: node
+  linkType: hard
+
+"@lichtblick/message-definition@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "@lichtblick/message-definition@npm:1.0.0"
+  checksum: 2046b4fd7781cd088aeebb84e9e3b742868df9d79fc915ee484ed027e48b306a5c8151c327e2e205124c23fd1dd90d8f007d87e22fe363e79db3602d4d2a06b4
+  languageName: node
+  linkType: hard
+
+"@lichtblick/omg-support@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "@lichtblick/omg-support@workspace:."
+  dependencies:
+    "@lichtblick/eslint-plugin": ^1.0.1
+    "@lichtblick/message-definition": ^1.0.0
+    "@types/jest": ^29.5.2
+    "@typescript-eslint/eslint-plugin": ^5.60.0
+    "@typescript-eslint/parser": ^7.2.0
+    eslint: 8.52.0
+    eslint-config-prettier: ^8.8.0
+    eslint-plugin-es: ^4.1.0
+    eslint-plugin-filenames: ^1.3.2
+    eslint-plugin-import: ^2.29.1
+    eslint-plugin-jest: ^27.9.0
+    eslint-plugin-prettier: ^4.2.1
+    jest: 29.6.4
+    prettier: 2.7.1
+    ts-jest: 29.1.4
+    typescript: 5.2.2
+  languageName: unknown
+  linkType: soft
+
+"@lichtblick/omgidl-parser@workspace:*, @lichtblick/omgidl-parser@workspace:packages/omgidl-parser":
+  version: 0.0.0-use.local
+  resolution: "@lichtblick/omgidl-parser@workspace:packages/omgidl-parser"
+  dependencies:
+    "@foxglove/tsconfig": 2.0.0
+    "@lichtblick/message-definition": ^1.0.0
+    "@types/jest": 29.4.0
+    "@types/nearley": ^2.11.5
+    jest: 29.4.2
+    moo: ^0.5.2
+    nearley: ^2.20.1
+    nearley-loader: ^2.0.0
+    prettier: 2.8.8
+    rimraf: 5.0.5
+    ts-jest: 29.1.4
+    ts-loader: ^9.5.0
+    tslib: ^2
+    typescript: 5.2.2
+    webpack: ^5.89.0
+    webpack-cli: ^5.1.4
+  languageName: unknown
+  linkType: soft
+
+"@lichtblick/omgidl-serialization@workspace:packages/omgidl-serialization":
+  version: 0.0.0-use.local
+  resolution: "@lichtblick/omgidl-serialization@workspace:packages/omgidl-serialization"
+  dependencies:
+    "@foxglove/cdr": 3.3.0
+    "@lichtblick/message-definition": ^1.0.0
+    "@lichtblick/omgidl-parser": "workspace:*"
+    "@sounisi5011/jest-binary-data-matchers": 1.2.1
+    typescript: 5.2.2
+  languageName: unknown
+  linkType: soft
+
+"@lichtblick/ros2idl-parser@workspace:packages/ros2idl-parser":
+  version: 0.0.0-use.local
+  resolution: "@lichtblick/ros2idl-parser@workspace:packages/ros2idl-parser"
+  dependencies:
+    "@lichtblick/message-definition": ^1.0.0
+    "@lichtblick/omgidl-parser": "workspace:*"
+    "@types/jest": ^28.0.0
+    jest: 28.1.3
+    md5-typescript: ^1.0.5
+    prettier: 2.7.1
+    rimraf: 5.0.5
+    ts-jest: ^29.1.4
+    ts-loader: 9.5.0
+    typescript: 5.2.2
+    webpack: 5.89.0
+    webpack-cli: 5.1.4
+  languageName: unknown
+  linkType: soft
+
 "@nodelib/fs.scandir@npm:2.1.5":
   version: 2.1.5
   resolution: "@nodelib/fs.scandir@npm:2.1.5"
@@ -1767,6 +1768,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/json-schema@npm:^7.0.12":
+  version: 7.0.15
+  resolution: "@types/json-schema@npm:7.0.15"
+  checksum: 97ed0cb44d4070aecea772b7b2e2ed971e10c81ec87dd4ecc160322ffa55ff330dace1793489540e3e318d90942064bb697cc0f8989391797792d919737b3b98
+  languageName: node
+  linkType: hard
+
 "@types/json5@npm:^0.0.29":
   version: 0.0.29
   resolution: "@types/json5@npm:0.0.29"
@@ -1799,6 +1807,13 @@ __metadata:
   version: 7.5.0
   resolution: "@types/semver@npm:7.5.0"
   checksum: 0a64b9b9c7424d9a467658b18dd70d1d781c2d6f033096a6e05762d20ebbad23c1b69b0083b0484722aabf35640b78ccc3de26368bcae1129c87e9df028a22e2
+  languageName: node
+  linkType: hard
+
+"@types/semver@npm:^7.5.0":
+  version: 7.5.8
+  resolution: "@types/semver@npm:7.5.8"
+  checksum: ea6f5276f5b84c55921785a3a27a3cd37afee0111dfe2bcb3e03c31819c197c782598f17f0b150a69d453c9584cd14c4c4d7b9a55d2c5e6cacd4d66fdb3b3663
   languageName: node
   linkType: hard
 
@@ -1877,6 +1892,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@typescript-eslint/scope-manager@npm:6.21.0":
+  version: 6.21.0
+  resolution: "@typescript-eslint/scope-manager@npm:6.21.0"
+  dependencies:
+    "@typescript-eslint/types": 6.21.0
+    "@typescript-eslint/visitor-keys": 6.21.0
+  checksum: 71028b757da9694528c4c3294a96cc80bc7d396e383a405eab3bc224cda7341b88e0fc292120b35d3f31f47beac69f7083196c70616434072fbcd3d3e62d3376
+  languageName: node
+  linkType: hard
+
 "@typescript-eslint/scope-manager@npm:7.2.0":
   version: 7.2.0
   resolution: "@typescript-eslint/scope-manager@npm:7.2.0"
@@ -1911,6 +1936,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@typescript-eslint/types@npm:6.21.0":
+  version: 6.21.0
+  resolution: "@typescript-eslint/types@npm:6.21.0"
+  checksum: 9501b47d7403417af95fc1fb72b2038c5ac46feac0e1598a46bcb43e56a606c387e9dcd8a2a0abe174c91b509f2d2a8078b093786219eb9a01ab2fbf9ee7b684
+  languageName: node
+  linkType: hard
+
 "@typescript-eslint/types@npm:7.2.0":
   version: 7.2.0
   resolution: "@typescript-eslint/types@npm:7.2.0"
@@ -1936,6 +1968,25 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@typescript-eslint/typescript-estree@npm:6.21.0":
+  version: 6.21.0
+  resolution: "@typescript-eslint/typescript-estree@npm:6.21.0"
+  dependencies:
+    "@typescript-eslint/types": 6.21.0
+    "@typescript-eslint/visitor-keys": 6.21.0
+    debug: ^4.3.4
+    globby: ^11.1.0
+    is-glob: ^4.0.3
+    minimatch: 9.0.3
+    semver: ^7.5.4
+    ts-api-utils: ^1.0.1
+  peerDependenciesMeta:
+    typescript:
+      optional: true
+  checksum: dec02dc107c4a541e14fb0c96148f3764b92117c3b635db3a577b5a56fc48df7a556fa853fb82b07c0663b4bf2c484c9f245c28ba3e17e5cb0918ea4cab2ea21
+  languageName: node
+  linkType: hard
+
 "@typescript-eslint/typescript-estree@npm:7.2.0":
   version: 7.2.0
   resolution: "@typescript-eslint/typescript-estree@npm:7.2.0"
@@ -1955,7 +2006,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/utils@npm:5.60.0, @typescript-eslint/utils@npm:^5, @typescript-eslint/utils@npm:^5.10.0":
+"@typescript-eslint/utils@npm:5.60.0, @typescript-eslint/utils@npm:^5.10.0":
   version: 5.60.0
   resolution: "@typescript-eslint/utils@npm:5.60.0"
   dependencies:
@@ -1973,6 +2024,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@typescript-eslint/utils@npm:^6":
+  version: 6.21.0
+  resolution: "@typescript-eslint/utils@npm:6.21.0"
+  dependencies:
+    "@eslint-community/eslint-utils": ^4.4.0
+    "@types/json-schema": ^7.0.12
+    "@types/semver": ^7.5.0
+    "@typescript-eslint/scope-manager": 6.21.0
+    "@typescript-eslint/types": 6.21.0
+    "@typescript-eslint/typescript-estree": 6.21.0
+    semver: ^7.5.4
+  peerDependencies:
+    eslint: ^7.0.0 || ^8.0.0
+  checksum: b129b3a4aebec8468259f4589985cb59ea808afbfdb9c54f02fad11e17d185e2bf72bb332f7c36ec3c09b31f18fc41368678b076323e6e019d06f74ee93f7bf2
+  languageName: node
+  linkType: hard
+
 "@typescript-eslint/visitor-keys@npm:5.60.0":
   version: 5.60.0
   resolution: "@typescript-eslint/visitor-keys@npm:5.60.0"
@@ -1980,6 +2048,16 @@ __metadata:
     "@typescript-eslint/types": 5.60.0
     eslint-visitor-keys: ^3.3.0
   checksum: d39b2485d030f9755820d0f6f3748a8ec44e1ca23cb36ddcba67a9eb1f258c8ec83c61fc015c50e8f4a00d05df62d719dbda445625e3e71a64a659f1d248157e
+  languageName: node
+  linkType: hard
+
+"@typescript-eslint/visitor-keys@npm:6.21.0":
+  version: 6.21.0
+  resolution: "@typescript-eslint/visitor-keys@npm:6.21.0"
+  dependencies:
+    "@typescript-eslint/types": 6.21.0
+    eslint-visitor-keys: ^3.4.1
+  checksum: 67c7e6003d5af042d8703d11538fca9d76899f0119130b373402819ae43f0bc90d18656aa7add25a24427ccf1a0efd0804157ba83b0d4e145f06107d7d1b7433
   languageName: node
   linkType: hard
 
