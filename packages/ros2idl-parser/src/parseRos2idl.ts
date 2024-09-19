@@ -1,5 +1,9 @@
 import { MessageDefinition, MessageDefinitionField } from "@lichtblick/message-definition";
-import { IDLMessageDefinitionField, IDLMessageDefinition, parseIDL } from "@lichtblick/omgidl-parser";
+import {
+  IDLMessageDefinitionField,
+  IDLMessageDefinition,
+  parseIDL,
+} from "@lichtblick/omgidl-parser";
 
 /**
  * Parses `ros2idl` schema into flattened message definitions for serialization/deserialization.
