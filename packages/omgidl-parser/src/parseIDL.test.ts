@@ -22,6 +22,7 @@ describe("omgidl parser tests", () => {
       },
     ]);
   });
+
   it("parses a struct with a member that references another struct", () => {
     const schema = `
     struct B {
@@ -57,6 +58,7 @@ describe("omgidl parser tests", () => {
       },
     ]);
   });
+
   it("parses a struct with multiple primitive definitions", () => {
     const schema = `
     struct A {
@@ -100,6 +102,7 @@ describe("omgidl parser tests", () => {
       },
     ]);
   });
+
   it("parses a module with an enclosed struct", () => {
     const types = parse(
       `
@@ -126,6 +129,7 @@ describe("omgidl parser tests", () => {
       },
     ]);
   });
+
   it("parses a module with an enclosed struct and module", () => {
     const types = parse(
       `
@@ -169,6 +173,7 @@ describe("omgidl parser tests", () => {
       },
     ]);
   });
+
   it("parses typedefs of complex types", () => {
     const types = parse(
       `module msg {
@@ -214,6 +219,7 @@ describe("omgidl parser tests", () => {
       },
     ]);
   });
+
   it("parses nested typedefs in modules and their usage", () => {
     const types = parse(
       `module msg {
@@ -273,6 +279,7 @@ describe("omgidl parser tests", () => {
       },
     ]);
   });
+
   it("parses typedefs by local and global names many levels deep into module", () => {
     const types = parse(
       `module layer1 {
@@ -371,6 +378,7 @@ describe("omgidl parser tests", () => {
       },
     ]);
   });
+
   it("parses a module with a typedefs used in a struct", () => {
     const types = parse(
       `
@@ -418,6 +426,7 @@ describe("omgidl parser tests", () => {
       },
     ]);
   });
+
   it("parses a module with an multiple enclosed structs and modules", () => {
     const types = parse(
       `
@@ -523,6 +532,7 @@ describe("omgidl parser tests", () => {
       },
     ]);
   });
+
   it("ignore #include statements in AST", () => {
     const types = parse(
       `
@@ -541,7 +551,6 @@ describe("omgidl parser tests", () => {
     };
     `,
     );
-
     // same as above
     expect(types).toEqual([
       {
@@ -571,6 +580,7 @@ describe("omgidl parser tests", () => {
       },
     ]);
   });
+
   it("parses a module full of string constants", () => {
     const types = parse(
       `
@@ -627,6 +637,7 @@ module rosidl_parser {
       },
     ]);
   });
+
   it("parses all non-array type declarations", () => {
     const types = parse(
       `
@@ -767,6 +778,7 @@ module rosidl_parser {
       },
     ]);
   });
+
   it("parses a module of all array types", () => {
     const types = parse(
       `
@@ -1007,6 +1019,7 @@ module rosidl_parser {
       },
     ]);
   });
+
   it('parses a module with customTypes and properly replaces "::"', () => {
     const types = parse(
       `
@@ -1067,6 +1080,7 @@ module geometry {
       },
     ]);
   });
+
   it("parses a module with various floating point default values", () => {
     const types = parse(
       `
@@ -1308,6 +1322,7 @@ module geometry {
       },
     ]);
   });
+
   it("parses a module full of numeric constants", () => {
     const types = parse(
       `
@@ -1416,6 +1431,7 @@ module rosidl_parser {
       },
     ]);
   });
+
   it("can parse multiple forward declarations on same line with default annotation", () => {
     const msgDef = `
     module action {
@@ -1465,6 +1481,7 @@ module rosidl_parser {
       },
     ]);
   });
+
   it("parses enums", () => {
     const msgDef = `
       enum COLORS {
@@ -1504,6 +1521,7 @@ module rosidl_parser {
       },
     ]);
   });
+
   it("parses enums with only explicit values", () => {
     const msgDef = `
       enum COLORS {
@@ -1546,6 +1564,7 @@ module rosidl_parser {
       },
     ]);
   });
+
   it("parses enums with implicit and explicit values", () => {
     const msgDef = `
       enum COLORS {
@@ -1612,6 +1631,7 @@ module rosidl_parser {
       },
     ]);
   });
+
   it("parses enums in modules", () => {
     const msgDef = `
     module Scene {
@@ -1653,6 +1673,7 @@ module rosidl_parser {
       },
     ]);
   });
+
   it("parses enums used as type", () => {
     const msgDef = `
     enum COLORS {
@@ -1706,6 +1727,7 @@ module rosidl_parser {
       },
     ]);
   });
+
   it("parses enums used as constants", () => {
     const msgDef = `
     enum COLORS {
@@ -1790,6 +1812,7 @@ module rosidl_parser {
       },
     ]);
   });
+
   it("prioritizes typedef usage annotations over typedef declaration annotations", () => {
     const msgDef = `
     @default(value=2)
@@ -1800,7 +1823,6 @@ module rosidl_parser {
       byteWithDefault byteWithDifferentDefault;
     };
    `;
-
     const types = parse(msgDef);
     expect(types).toEqual([
       {
@@ -1848,7 +1870,6 @@ module rosidl_parser {
     struct BigGrid {
       grid45 gridLine[1][2][3];
     };`;
-
     const types = parse(msgDef);
     expect(types).toEqual([
       {
@@ -1874,7 +1895,6 @@ module rosidl_parser {
     struct GridBoard {
       float grid[rows][cols];
     };`;
-
     const types = parse(msgDef);
     expect(types).toEqual([
       {
@@ -2016,6 +2036,7 @@ module rosidl_parser {
       },
     ]);
   });
+
   it("can parse union that uses unscoped-local enum values from the switch enum", () => {
     const msgDef = `
       enum ColorMode {
@@ -2089,6 +2110,7 @@ module rosidl_parser {
       },
     ]);
   });
+
   it("can parse union that uses boolean", () => {
     const msgDef = `
     typedef boolean usesColor;
@@ -2102,7 +2124,6 @@ module rosidl_parser {
         Color chosenColor;
     };
       `;
-
     const ast = parse(msgDef);
     expect(ast).toEqual([
       {
@@ -2143,6 +2164,7 @@ module rosidl_parser {
       },
     ]);
   });
+
   it("can parse union  with multiple predicates declaration", () => {
     const msgDef = `
     union MyUnion switch (long) {
@@ -2492,9 +2514,7 @@ module rosidl_parser {
     };
     };
     `;
-
     const definitions = parse(schemaString);
-
     expect(definitions).toEqual([
       {
         aggregatedKind: "struct",
@@ -2599,7 +2619,6 @@ module rosidl_parser {
         uint8 ColorSettings;
     };
       `;
-
     const ast = parseIDL(msgDef);
     expect(ast).toEqual([
       {
@@ -2681,7 +2700,6 @@ module rosidl_parser {
           int32arr2 intArray;
         };
     `;
-
     expect(() => parse(msgDef)).toThrow(
       /we do not support composing variable length arrays with typedefs/i,
     );
