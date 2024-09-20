@@ -41,7 +41,6 @@
     "@lichtblick/eslint-plugin": "^1.0.1",
     "@lichtblick/message-definition": "^1.0.0",
     "@types/jest": "^29.5.2",
-    "@types/lodash": "^4.17.7",
     "@typescript-eslint/eslint-plugin": "6.10.0",
     "@typescript-eslint/parser": "6.10.0",
     "eslint": "8.52.0",
@@ -55,8 +54,5 @@
     "prettier": "2.7.1",
     "ts-jest": "29.1.4",
     "typescript": "5.3.3"
-  },
-  "dependencies": {
-    "lodash": "^4.17.21"
   }
 }

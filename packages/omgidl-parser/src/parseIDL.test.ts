@@ -30,7 +30,6 @@ describe("omgidl parser tests", () => {
     struct A {
       int32 num;
     };
-
     `;
     const types = parse(schema);
     expect(types).toEqual([
@@ -66,7 +65,6 @@ describe("omgidl parser tests", () => {
       sequence<uint8, 10> seq;
       string str;
     };
-
     `;
     const types = parse(schema);
     expect(types).toEqual([
@@ -1662,7 +1660,6 @@ module rosidl_parser {
       GREEN,
       BLUE
     };
-
     struct Line {
       COLORS color;
     };
@@ -1711,7 +1708,6 @@ module rosidl_parser {
   });
   it("parses enums used as constants", () => {
     const msgDef = `
-
     enum COLORS {
       RED,
       GREEN,
