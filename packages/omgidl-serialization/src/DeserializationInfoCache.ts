@@ -1,4 +1,4 @@
-import { CdrReader } from "@foxglove/cdr";
+import { CdrReader } from "@lichtblick/cdr";
 import {
   IDLMessageDefinition,
   IDLMessageDefinitionField,

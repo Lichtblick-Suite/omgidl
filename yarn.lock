@@ -560,20 +560,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@foxglove/cdr@npm:3.3.0":
-  version: 3.3.0
-  resolution: "@foxglove/cdr@npm:3.3.0"
-  checksum: f1c5479474bbd94a9992f788b52092d9938095014df4983eb6099741dc390c2168ff77c5e8431a8fa3bbf437b34cb74f2c73a0a97331166c837788711f5d501d
-  languageName: node
-  linkType: hard
-
-"@foxglove/tsconfig@npm:2.0.0":
-  version: 2.0.0
-  resolution: "@foxglove/tsconfig@npm:2.0.0"
-  checksum: c6d581ff4e6e75e4c22d909a51f377b6f9b296805234009ca6950f86c76bbefc5f4f95eef92e24ede3134cb411c0d08e73d484a30c448d8e248414dcc98c1400
-  languageName: node
-  linkType: hard
-
 "@humanwhocodes/config-array@npm:^0.11.13":
   version: 0.11.13
   resolution: "@humanwhocodes/config-array@npm:0.11.13"
@@ -1397,6 +1383,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@lichtblick/cdr@npm:1.0.1":
+  version: 1.0.1
+  resolution: "@lichtblick/cdr@npm:1.0.1"
+  checksum: ec5db4914bb4d1ae7b3d8f29b936e4ee933c7b7984d075428d7c0906cfac06a06b50cf12c6753e71de01bf2c2f70c89d16a2322f6d287c43bc40a539d06e05fd
+  languageName: node
+  linkType: hard
+
 "@lichtblick/eslint-plugin@npm:^1.0.1":
   version: 1.0.1
   resolution: "@lichtblick/eslint-plugin@npm:1.0.1"
@@ -1450,8 +1443,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@lichtblick/omgidl-parser@workspace:packages/omgidl-parser"
   dependencies:
-    "@foxglove/tsconfig": 2.0.0
     "@lichtblick/message-definition": ^1.0.0
+    "@lichtblick/tsconfig": 1.0.0
     "@types/jest": 29.4.0
     "@types/nearley": ^2.11.5
     jest: 29.4.2
@@ -1473,7 +1466,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@lichtblick/omgidl-serialization@workspace:packages/omgidl-serialization"
   dependencies:
-    "@foxglove/cdr": 3.3.0
+    "@lichtblick/cdr": 1.0.1
     "@lichtblick/message-definition": ^1.0.0
     "@lichtblick/omgidl-parser": "workspace:*"
     "@sounisi5011/jest-binary-data-matchers": 1.2.1
@@ -1499,6 +1492,13 @@ __metadata:
     webpack-cli: 5.1.4
   languageName: unknown
   linkType: soft
+
+"@lichtblick/tsconfig@npm:1.0.0":
+  version: 1.0.0
+  resolution: "@lichtblick/tsconfig@npm:1.0.0"
+  checksum: f3215bb523b8c84643332bfc12dc9d392d273b1beab0674999c730ebaee246c29aec788140d5ba4aefe493d4488bbef5b31d50ba7abf0dd869a06ab00ef42add
+  languageName: node
+  linkType: hard
 
 "@nodelib/fs.scandir@npm:2.1.5":
   version: 2.1.5

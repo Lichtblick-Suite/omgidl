@@ -1,4 +1,4 @@
-import { CdrWriter, EncapsulationKind } from "@foxglove/cdr";
+import { CdrWriter, EncapsulationKind } from "@lichtblick/cdr";
 import { parseIDL } from "@lichtblick/omgidl-parser";
 
 import { MessageReader } from "./MessageReader";

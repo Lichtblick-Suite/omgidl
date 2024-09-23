@@ -1,4 +1,4 @@
-import { CdrWriter, CdrWriterOpts } from "@foxglove/cdr";
+import { CdrWriter, CdrWriterOpts } from "@lichtblick/cdr";
 import { DefaultValue, MessageDefinitionField } from "@lichtblick/message-definition";
 import { IDLMessageDefinition, IDLMessageDefinitionField } from "@lichtblick/omgidl-parser";
 
