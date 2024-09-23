@@ -1,6 +1,6 @@
 {
   "name": "@lichtblick/omgidl-serialization",
-  "version": "1.1.2",
+  "version": "1.0.0",
   "description": "OMG IDL Schema message serializers and deserializer",
   "license": "MIT",
   "keywords": [
@@ -18,13 +18,13 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/lichtblick-suite/omgidl.git"
+    "url": "https://github.com/lichtblick-suite/omgidl"
   },
   "author": {
     "name": "Lichtblick",
     "email": "lichtblick@bmwgroup.com"
   },
-  "homepage": "https://github.com/lichtblick-suite/omgidl.git",
+  "homepage": "https://github.com/lichtblick-suite/omgidl",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "files": [
