@@ -1,0 +1,99 @@
+name: Auto Bump Version
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'packages/omgidl-parser/**'
+      - 'packages/omgidl-serialization/**'
+      - 'packages/ros2idl-parser/**'
+
+jobs:
+  bump:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.LICHTBLICK_GITHUB_TOKEN }}
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - run: corepack enable
+
+      - name: Cache yarn dependencies
+        uses: actions/cache@v4
+        with:
+          path: |
+            **/node_modules
+            ~/.cache/yarn
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
+      - name: Paths Changes Filter
+        id: filter_paths
+        uses: dorny/paths-filter@v3
+        with:
+          filters: |
+            omgidl_parser:
+              - 'packages/omgidl-parser/**'
+            omgidl_serialization:
+              - 'packages/omgidl-serialization/**'
+            ros2idl_parser:
+              - 'packages/ros2idl-parser/**'
+
+      - name: Install dependencies for omgidl-parser
+        if: steps.filter_paths.outputs.omgidl_parser == 'true'
+        run: |
+          yarn install
+          yarn plugin import version
+        working-directory: packages/omgidl-parser
+
+      - name: Install dependencies for omgidl-serialization
+        if: steps.filter_paths.outputs.omgidl_serialization == 'true'
+        run: |
+          yarn install
+          yarn plugin import version
+        working-directory: packages/omgidl-serialization
+
+      - name: Install dependencies for ros2idl-parser
+        if: steps.filter_paths.outputs.ros2idl_parser == 'true'
+        run: |
+          yarn install
+          yarn plugin import version
+        working-directory: packages/ros2idl-parser
+
+      - name: Bump version in omgidl-parser package.json
+        if: steps.filter_paths.outputs.omgidl_parser == 'true'
+        run: yarn version patch
+        working-directory: packages/omgidl-parser
+
+      - name: Bump version in omgidl-serialization package.json
+        if: steps.filter_paths.outputs.omgidl_serialization == 'true'
+        run: yarn version patch
+        working-directory: packages/omgidl-serialization
+
+      - name: Bump version in ros2idl-parser package.json
+        if: steps.filter_paths.outputs.ros2idl_parser == 'true'
+        run: yarn version patch
+        working-directory: packages/ros2idl-parser
+
+      - name: Set up Git
+        run: |
+          git config --global user.name 'github-actions'
+          git config --global user.email 'github-actions@github.com'
+
+      - name: Commit version bumps
+        run: |
+          git add packages/**/package.json yarn.lock
+          git commit -m "chore: bump versions in updated packages [skip actions]"
+        if: steps.filter_paths.outputs.omgidl_parser == 'true' || steps.filter_paths.outputs.omgidl_serialization == 'true' || steps.filter_paths.outputs.ros2idl_parser == 'true'
+
+      - name: Push changes
+        run: git push origin main
+        if: steps.filter_paths.outputs.omgidl_parser == 'true' || steps.filter_paths.outputs.omgidl_serialization == 'true' || steps.filter_paths.outputs.ros2idl_parser == 'true'
